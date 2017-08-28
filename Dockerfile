@@ -45,6 +45,7 @@ RUN set -ex \
   libffi-dev \
 	' \
 	&& apt-get update \
+	&& apt-get dist-upgrade -y \
 	&& apt-get install -y --no-install-recommends $buildDeps \
 	&& curl -fSL -o ruby.tar.gz "http://cache.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz" \
 	&& echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.gz" | sha256sum -c - \
