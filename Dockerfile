@@ -36,7 +36,7 @@ RUN set -ex \
   pkg-config \
   libreadline6-dev \
   zlib1g-dev \
-  libssl-dev \
+  libssl1.0-dev \
   libyaml-dev \
   libsqlite3-dev \
   sqlite3 \
@@ -59,7 +59,7 @@ RUN set -ex \
 	&& make -j"$(nproc)" \
 	&& make install \
 	&& apt-get purge -y --auto-remove $buildDeps \
-	&& apt-get install -y build-essential libpq-dev libyaml-dev libreadline6-dev zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libgdbm-dev libncurses5-dev libffi-dev \
+	&& apt-get install -y build-essential libpq-dev libyaml-dev libreadline6-dev zlib1g-dev libssl1.0-dev libyaml-dev libsqlite3-dev sqlite3 libgdbm-dev libncurses5-dev libffi-dev \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& gem update --system $RUBYGEMS_VERSION \
 	&& rm -r /usr/src/ruby
