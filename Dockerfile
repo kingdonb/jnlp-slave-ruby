@@ -64,7 +64,7 @@ RUN set -ex \
 	&& gem update --system $RUBYGEMS_VERSION \
 	&& rm -r /usr/src/ruby
 
-ENV BUNDLER_VERSION 1.16.0
+ENV BUNDLER_VERSION 1.16.6
 
 RUN gem install bundler --force --version "$BUNDLER_VERSION"
 RUN gem install bundler
