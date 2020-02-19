@@ -36,7 +36,7 @@ RUN set -ex \
   pkg-config \
   libreadline6-dev \
   zlib1g-dev \
-  libssl1.0-dev \
+  libssl1.1-dev \
   libyaml-dev \
   libsqlite3-dev \
   sqlite3 \
